@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puzzlo — Make room for wonder</title>
+<meta name="description" content="Gulf-inspired illustrated jigsaws and metal brain teasers. Make room for wonder.">
+<meta name="theme-color" content="#182C55">
+<meta property="og:title" content="Puzzlo — Make room for wonder">
+<meta property="og:description" content="Gulf-inspired illustrated jigsaws and metal brain teasers.">
+<meta property="og:image" content="assets/media/hero-poster.jpg">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&family=Readex+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/media/hero-poster.webp" type="image/webp">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- logo source: one symbol, coloured with currentColor -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <mask id="zz-cut" maskUnits="userSpaceOnUse" x="-6" y="-48" width="574" height="193">
+      <rect x="-6" y="-48" width="574" height="193" fill="#fff"/>
+      <path d="M299 72.5 A16.5 16.5 0 0 1 299 105.5" fill="none" stroke="#000" stroke-width="3.4"/>
+    </mask>
+    <symbol id="puzzlo-logo" viewBox="-6 -48 574 193">
+      <g mask="url(#zz-cut)" fill="none" stroke="currentColor" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 128 V11 M11 50 A39 39 0 1 0 89 50 A39 39 0 1 0 11 50"/>
+        <path d="M129 11 V50 A39 39 0 0 0 207 50 V11 M207 11 V89"/>
+        <path d="M243 11 H301 L243 89 H337"/>
+        <path d="M337 11 H395 L337 89 H395"/>
+        <path d="M435 -31 V89"/>
+        <path d="M473 50 A39 39 0 1 0 551 50 A39 39 0 1 0 473 50"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<p class="preview-note" role="note" data-i18n="preview">Preview store: sample products and placeholder prices. Checkout isn’t connected yet.</p>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="puzzlo home">
+      <svg class="logo" role="img" aria-label="puzzlo"><use href="#puzzlo-logo"/></svg>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#shop" data-i18n="navShop">Shop</a>
+      <a href="#story" data-i18n="navStory">Our story</a>
+      <a href="#gifts" data-i18n="navGifts">Gifts</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang" type="button" id="langToggle" lang="ar">عربي</button>
+      <button class="bag-btn" type="button" id="bagOpen" aria-haspopup="dialog" aria-controls="bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span class="sr" data-i18n="bag">Bag</span>
+        <span class="bag-count" id="bagCount" aria-live="polite">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="tagline">Make room for wonder.</p>
+        <h1 data-i18n-html="heroTitle">Watch wonder <em>come together.</em></h1>
+        <p class="lede" data-i18n="heroLede">Illustrated jigsaws of Gulf places and stories, and metal teasers that reward patience. Made for slow evenings and shared tables.</p>
+        <a class="btn btn-primary" href="#shop" data-i18n="heroCta">Find your next puzzle</a>
+      </div>
+      <figure class="hero-media">
+        <div class="video-frame">
+          <video id="heroVideo" muted loop playsinline preload="metadata" poster="assets/media/hero-poster.webp" aria-describedby="videoDesc">
+            <source src="assets/media/hero.webm" type="video/webm">
+            <source src="assets/media/hero.mp4" type="video/mp4">
+          </video>
+          <img class="video-fallback" src="assets/media/hero-poster.webp" alt="" width="1000" height="800">
+          <button class="video-toggle" id="videoToggle" type="button" aria-pressed="false">
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>
+            <span class="sr" id="videoToggleLabel">Pause video</span>
+          </button>
+        </div>
+        <figcaption id="videoDesc" class="sr" data-i18n="videoDesc">One hundred interlocking pieces move into place to reveal an illustrated Arabian coastline: a dhow at sunset, wind towers on the shore and palms on the beach.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="shop" id="shop" aria-labelledby="shopTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="shopTitle" data-i18n-html="shopTitle">Find your next <em>puzzle</em></h2>
+        <div class="filters" role="group" aria-label="Filter products" id="filters">
+          <button type="button" data-filter="all" aria-pressed="true" data-i18n="fAll">All</button>
+          <button type="button" data-filter="places" aria-pressed="false" data-i18n="fPlaces">Places &amp; Stories</button>
+          <button type="button" data-filter="metal" aria-pressed="false" data-i18n="fMetal">Metal Challenges</button>
+          <button type="button" data-filter="together" aria-pressed="false" data-i18n="fTogether">Time Together</button>
+        </div>
+      </div>
+      <p class="filter-status sr" id="filterStatus" aria-live="polite"></p>
+      <ul class="grid" id="productGrid"></ul>
+    </div>
+  </section>
+
+  <section class="story" id="story" aria-labelledby="storyTitle">
+    <div class="wrap story-grid">
+      <div class="story-art">
+        <img src="assets/media/coastline-art.webp" alt="" loading="lazy" width="1000" height="800">
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow" data-i18n="storyEyebrow">Why we make puzzles</p>
+        <h2 id="storyTitle" data-i18n-html="storyTitle">Small pieces, <em>big quiet.</em></h2>
+        <p data-i18n="storyP">Puzzlo began with a simple wish: to put down the phone and pick up something that rewards attention. Every picture we make starts from a place on the Gulf coast we love, then becomes a hundred, five hundred, a thousand small decisions.</p>
+        <dl class="pillars">
+          <div><dt data-i18n="p1t">Curiosity</dt><dd data-i18n="p1d">A corner of sky, a coral door. You start anywhere and keep looking.</dd></div>
+          <div><dt data-i18n="p2t">Discovery</dt><dd data-i18n="p2d">That small click when a piece fits, or a ring finally slips free.</dd></div>
+          <div><dt data-i18n="p3t">Shared time</dt><dd data-i18n="p3d">One table, a pot of tea, and everyone pointing at the same edge.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="gifts" id="gifts" aria-labelledby="giftsTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="giftsTitle" data-i18n-html="giftsTitle">Give an evening, <em>not just a gift.</em></h2>
+        <p class="lede" data-i18n="giftsLede">A puzzle is time you hand to someone. Choose by the person, not the piece count.</p>
+      </div>
+      <div class="gift-cards">
+        <button type="button" class="gift-card" data-goto="metal">
+          <span class="gift-kicker" data-i18n="g1k">For the one who loves a challenge</span>
+          <span class="gift-title" data-i18n="g1t">Metal Challenges</span>
+          <span class="gift-link" data-i18n="gLink">See the edit</span>
+        </button>
+        <button type="button" class="gift-card" data-goto="places">
+          <span class="gift-kicker" data-i18n="g2k">For someone who misses home</span>
+          <span class="gift-title" data-i18n="g2t">Places &amp; Stories</span>
+          <span class="gift-link" data-i18n="gLink">See the edit</span>
+        </button>
+        <button type="button" class="gift-card" data-goto="together">
+          <span class="gift-kicker" data-i18n="g3k">For the whole family</span>
+          <span class="gift-title" data-i18n="g3t">Time Together</span>
+          <span class="gift-link" data-i18n="gLink">See the edit</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <svg class="logo logo-footer" role="img" aria-label="puzzlo"><use href="#puzzlo-logo"/></svg>
+      <p class="footer-tag" data-i18n="tagline">Make room for wonder.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#shop" data-i18n="navShop">Shop</a>
+      <a href="#story" data-i18n="navStory">Our story</a>
+      <a href="#gifts" data-i18n="navGifts">Gifts</a>
+    </nav>
+    <p class="footer-note"><span data-i18n="footNote">Serving the UAE and Saudi Arabia. Prices in SAR. Online checkout isn’t connected yet.</span><br><span>© 2026 Puzzlo</span></p>
+  </div>
+</footer>
+
+<!-- Bag -->
+<div class="scrim" id="scrim" hidden></div>
+<aside class="bag" id="bag" role="dialog" aria-modal="true" aria-labelledby="bagTitle" hidden>
+  <div class="bag-head">
+    <h2 id="bagTitle" data-i18n="bagTitle">Your bag</h2>
+    <button type="button" class="icon-btn" id="bagClose"><span class="sr" data-i18n="close">Close</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="bag-body">
+    <ul class="bag-list" id="bagList"></ul>
+    <p class="bag-empty" id="bagEmpty" data-i18n="bagEmpty">Your bag is empty. Something curious is waiting in the shop.</p>
+    <section class="saved" id="savedSection" aria-labelledby="savedTitle">
+      <h3 id="savedTitle" data-i18n="savedTitle">Saved for later</h3>
+      <ul class="bag-list saved-list" id="savedList"></ul>
+    </section>
+  </div>
+  <div class="bag-foot">
+    <div class="total-row"><span data-i18n="items">Items</span><span id="bagItems">0</span></div>
+    <div class="total-row total"><span data-i18n="subtotal">Subtotal</span><span id="bagSubtotal">SAR 0</span></div>
+    <button type="button" class="btn btn-primary btn-block" disabled aria-describedby="checkoutNote" data-i18n="checkout">Checkout</button>
+    <p class="checkout-note" id="checkoutNote" data-i18n="checkoutNote">Checkout isn’t connected yet, so orders can’t be placed on this site.</p>
+  </div>
+</aside>
+
+<!-- Product detail -->
+<dialog class="product-dialog" id="productDialog" aria-labelledby="pdName">
+  <div class="pd">
+    <button type="button" class="icon-btn pd-close" id="pdClose"><span class="sr" data-i18n="close">Close</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="pd-media"><img id="pdImg" alt="" width="1000" height="1250"></div>
+    <div class="pd-info">
+      <p class="eyebrow" id="pdCat"></p>
+      <h2 id="pdName"></h2>
+      <p class="pd-price" id="pdPrice"></p>
+      <p class="pd-desc" id="pdDesc"></p>
+      <dl class="pd-specs" id="pdSpecs"></dl>
+      <div class="pd-actions">
+        <div class="qty" role="group" aria-label="Quantity">
+          <button type="button" id="pdMinus"><span class="sr" data-i18n="less">Decrease quantity</span>−</button>
+          <output id="pdQty" aria-live="polite">1</output>
+          <button type="button" id="pdPlus"><span class="sr" data-i18n="more">Increase quantity</span>+</button>
+        </div>
+        <button type="button" class="btn btn-primary" id="pdAdd" data-i18n="addToBag">Add to bag</button>
+      </div>
+      <button type="button" class="text-btn" id="pdSave"></button>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

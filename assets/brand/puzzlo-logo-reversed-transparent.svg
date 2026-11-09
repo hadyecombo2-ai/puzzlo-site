@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -48 574 193" role="img" aria-label="puzzlo">
+<title>puzzlo</title>
+<defs><mask id="cut-t" maskUnits="userSpaceOnUse" x="-6" y="-48" width="574" height="193"><rect x="-6" y="-48" width="574" height="193" fill="#fff"/><path d="M299 72.5 A16.5 16.5 0 0 1 299 105.5" fill="none" stroke="#000" stroke-width="3.4" stroke-linejoin="round"/></mask></defs>
+<g mask="url(#cut-t)" fill="none" stroke="#F7F5EF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"><path d="M11 128 V11 M11 50 A39 39 0 1 0 89 50 A39 39 0 1 0 11 50"/><path d="M129 11 V50 A39 39 0 0 0 207 50 V11 M207 11 V89"/><path d="M243 11 H301 L243 89 H337"/><path d="M337 11 H395 L337 89 H395"/><path d="M435 -31 V89"/><path d="M473 50 A39 39 0 1 0 551 50 A39 39 0 1 0 473 50"/></g>
+</svg>
